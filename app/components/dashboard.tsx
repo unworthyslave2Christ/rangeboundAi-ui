@@ -300,8 +300,8 @@ export function DashboardPage() {
         <div className="flex items-center gap-3">
           <div className="h-10 w-10 bg-indigo-600 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-500/20"><Layers className="h-5 w-5 text-white" /></div>
           <div>
-            <h1 className="text-xl font-bold tracking-tight text-white">RangeBound AI Matrix</h1>
-            <p className="text-xs text-slate-400">Multichain Concentrated Liquidity Yield Dashboard</p>
+            <h1 className="text-xl font-bold tracking-tight text-white">RangeBound AI </h1>
+            <p className="text-xs text-slate-400"> A multichain concentrated liquidity yield dashboard</p>
           </div>
         </div>
         <ConnectButton />
@@ -314,8 +314,7 @@ export function DashboardPage() {
               <span className="text-xs text-slate-400 font-bold uppercase flex items-center gap-2"><Filter className="h-4 w-4 text-indigo-400"/> Network:</span>
               <div className="flex bg-slate-950 p-1 rounded-xl border border-slate-800">
                 <button onClick={() => { setSelectedChainFilter('all'); setActiveVaultIndex(0); setCurrentPage(1); }} className={`px-3 py-1 text-xs rounded-lg ${selectedChainFilter === 'all' ? 'bg-indigo-600 text-white' : 'text-slate-400'}`}>All</button>
-                <button onClick={() => { setSelectedChainFilter(42161); setActiveVaultIndex(0); setCurrentPage(1); }} className={`px-3 py-1 text-xs rounded-lg ${selectedChainFilter === 42161 ? 'bg-indigo-600 text-white' : 'text-slate-400'}`}>Arbitrum</button>
-                <button onClick={() => { setSelectedChainFilter(324); setActiveVaultIndex(0); setCurrentPage(1); }} className={`px-3 py-1 text-xs rounded-lg ${selectedChainFilter === 324 ? 'bg-indigo-600 text-white' : 'text-slate-400'}`}>zkSync</button>
+                <button onClick={() => { setSelectedChainFilter(11155111); setActiveVaultIndex(0); setCurrentPage(1); }} className={`px-3 py-1 text-xs rounded-lg ${selectedChainFilter === 11155111 ? 'bg-indigo-600 text-white' : 'text-slate-400'}`}>Eth Sepolia</button>
               </div>
               <span className="text-xs text-slate-400 font-bold uppercase ml-2">Fee:</span>
               <div className="flex bg-slate-950 p-1 rounded-xl border border-slate-800">
