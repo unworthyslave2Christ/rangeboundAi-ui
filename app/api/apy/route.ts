@@ -1,14 +1,12 @@
 // BY GOD'S GRACE ALONE
 import { NextResponse } from 'next/server';
 import { createPublicClient, http, parseAbi, formatUnits } from 'viem';
-import { arbitrum, zksync } from 'viem/chains';
+import { sepolia} from 'viem/chains';
 
 
 
 const SECURE_RPC_MAPPING: Record<number, string | undefined> = {
-  42161: process.env.ARBITRUM_RPC_SECURE_URL,
-  324: process.env.ZKSYNC_RPC_SECURE_URL,
-  11155111: process.env.ETH_SEPOLIA_RPC_SECURE_URL
+  11155111: process.env.ETH_SEPOLIA_RPC_URL
 };
 
 
@@ -52,7 +50,7 @@ export async function GET(request: Request) {
 
     // 2. Initialize Targeted Chain Public Client Node
     const publicClient = createPublicClient({
-      chain: chainId === 42161 ? arbitrum : zksync,
+      chain: chainId === 42161 ? sepolia : sepolia,
       transport: http(targetRpc)
     });
 

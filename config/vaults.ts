@@ -13,50 +13,79 @@ export interface VaultMetadata {
   poolAddress: `0x${string}`;
 }
 
+
 export const SUPPORTED_VAULTS: VaultMetadata[] = [
-  // --- ARBITRUM MAINNET VAULTS (ChainID: 42161) ---
+  // --- ARBITRUM SEPOLIA VAULTS (ChainID: 421614) ---
+
+  //  address(autoCLVault) 10000
+  // 0x9AaD71889a06FDCaEf6b13329eece88e0cf049E4
+  // address(autoCLVault2) 3000
+  // 0x2500232F7A258cE9b45d044a05583F51A838cDab
+  // address(autoCLVault3) 500
+  // 0x22dc516418Af0CCa4DAa369FF2BcDfC7a0CAD80E
+
+  // address  constant RangeAI_USDC= 0x36BD22d795316C9FaE0e7E6193C3AdC6eC231B11;
+  // address  constant RangeAI_WETH= 0x8B76E900079A028639A57f23AcD71eFD3a0598a4;
+
+  // address public constant USDC_WETH_POOL_RANGE_AI_ARB_SEPOLIA_10000 = 0x5f43ab8e790956d1F522E3D5E0859eF53431e2EE;
+
+  //   address public constant USDC_WETH_POOL_RANGE_AI_ARB_SEPOLIA_3000 = 0x35bC806FAC7b5B9104Ec9a4Cb72FA8D7764B4a09;
+    
+  //   address public constant USDC_WETH_POOL_RANGE_AI_ARB_SEPOLIA_500 = 0x171AAbAA17679e00F4b07D1b1D1180e62030fE5b;
+
+
+
+  
+  // --- VAULT_ADDRESS_ARBITRUM_SEPOLIA_ONE_PERCENT_FEE_TIER  ---
   {
-    id: "arb-usdc-weth-500",
-    chainId: 42161,
-    chainName: "Arbitrum",
+    id: "arb-sep-usdc-weth-range-ai-10000",
+    chainId: 421614,
+    chainName: "Arbitrum Sepolia",
     token0Name: "USDC",
     token1Name: "WETH",
-    token0Address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
-    token1Address: "0x82aF49447D8a07e3bd95BD0d56f352415231daa1",
+    token0Address: "0x36BD22d795316C9FaE0e7E6193C3AdC6eC231B11",
+    token1Address: "0x8B76E900079A028639A57f23AcD71eFD3a0598a4",
     token0Decimals: 6,
     token1Decimals: 18,
-    feeTier: 500, // 0.05%
-    vaultAddress: "0x1111111111111111111111111111111111111111", // Replace with real deployment
-    poolAddress: "0xC31E54c7a869B9FcBEcc14363CF510d1c41fa443"
+    feeTier: 10000, // 1%
+    vaultAddress: "0x9AaD71889a06FDCaEf6b13329eece88e0cf049E4",
+    poolAddress: "0x5f43ab8e790956d1F522E3D5E0859eF53431e2EE"
   },
+
+
+  // --- VAULT_ADDRESS_ARBITRUM_SEPOLIA_POINT_THREE_PERCENT_FEE_TIER  ---
   {
-    id: "arb-usdc-weth-3000",
-    chainId: 42161,
-    chainName: "Arbitrum",
+    id: "arb-sep-usdc-weth-range-ai-10000",
+    chainId: 421614,
+    chainName: "Arbitrum Sepolia",
     token0Name: "USDC",
     token1Name: "WETH",
-    token0Address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
-    token1Address: "0x82aF49447D8a07e3bd95BD0d56f352415231daa1",
+    token0Address: "0x36BD22d795316C9FaE0e7E6193C3AdC6eC231B11",
+    token1Address: "0x8B76E900079A028639A57f23AcD71eFD3a0598a4",
     token0Decimals: 6,
     token1Decimals: 18,
-    feeTier: 3000, // 0.30%
-    vaultAddress: "0x2222222222222222222222222222222222222222",
-    poolAddress: "0xC6962004f452bE9203591991D15f6b388e09E830"
+    feeTier: 10000, // 1%
+    vaultAddress: "0x2500232F7A258cE9b45d044a05583F51A838cDab",
+    poolAddress: "0x35bC806FAC7b5B9104Ec9a4Cb72FA8D7764B4a09"
   },
-  // --- ZKSYNC ERA MAINNET VAULTS (ChainID: 324) ---
+
+
+  // --- VAULT_ADDRESS_ARBITRUM_SEPOLIA_POINT_ZERO_FIVE_PERCENT_FEE_TIER  ---
   {
-    id: "zksync-usdt-weth-3000",
-    chainId: 324,
-    chainName: "zkSync",
-    token0Name: "USDT",
+    id: "arb-sep-usdc-weth-range-ai-10000",
+    chainId: 421614,
+    chainName: "Arbitrum Sepolia",
+    token0Name: "USDC",
     token1Name: "WETH",
-    token0Address: "0x493257fD37EDB34324870ee84e8D2B400078B5Fa",
-    token1Address: "0x5AEa0976754c30133c91087e102F83ca09b265d1",
+    token0Address: "0x36BD22d795316C9FaE0e7E6193C3AdC6eC231B11",
+    token1Address: "0x8B76E900079A028639A57f23AcD71eFD3a0598a4",
     token0Decimals: 6,
     token1Decimals: 18,
-    feeTier: 3000, // 0.30%
-    vaultAddress: "0x3333333333333333333333333333333333333333",
-    poolAddress: "0x4321432143214321432143214321432143214321"
-  }
-  // Add other variants matching 100 (0.01%) and 10000 (1.00%) fee tiers accordingly
-];
+    feeTier: 10000, // 1%
+    vaultAddress: "0x22dc516418Af0CCa4DAa369FF2BcDfC7a0CAD80E",
+    poolAddress: "0x171AAbAA17679e00F4b07D1b1D1180e62030fE5b"
+  },
+
+  
+
+]
